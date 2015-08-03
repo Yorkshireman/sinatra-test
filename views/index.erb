@@ -1,13 +1,12 @@
-<div style='border: 3px dashed turquoise'>
-  <% if @visitor %>
-    Hello, <%= @visitor %>!
-  <% else %>
-    <form action="/hello">
-      My name is <%= @name %>.
-      What's your name?
-      <input type="text" name="name">
-      <input type="submit" value="Submit">
-    </form>
-  <% end %>
-  <img src='http://localhost:4567/images/kitten.png'>
-</div>
+<h1><%= "Hello, my name is #{@name}." %></h1>
+<img src="images/cat.jpeg" style='border: 3px, dashed, red'>
+
+<% unless @visitor %>
+  <h3>What's your name?</h3>
+  <form action="hello" method="get">
+    <input type="text" name="name">
+    <input type="submit" value="Submit">
+  </form>
+<% else %>
+  <h3><%= "Hello, #{@visitor}!" %></h3>
+<% end %>

@@ -1,15 +1,11 @@
 require 'sinatra'
-# this could be called a "routing file"
+
 get '/' do
-  @name = %w(Nice_Cat Really_Nice_Cat Really_Just_The_Loveliest_Cat).sample
-  erb :index
+  "Hello!"
 end
 
-get '/secret' do
-  'Big Secret Page (ssh!)'
-end
-
-get '/hello' do
+get '/hello' do 
+  @name = %w(Twat Idiot Fucker Nobhead Dick).sample
   @visitor = params[:name]
   erb :index
 end
