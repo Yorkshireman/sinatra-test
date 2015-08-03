@@ -1,5 +1,5 @@
 require 'sinatra'
-
+# this could be called a "routing file"
 get '/' do
   @name = %w(Nice_Cat Really_Nice_Cat Really_Just_The_Loveliest_Cat).sample
   erb :index
