@@ -1,7 +1,8 @@
 require 'sinatra'
 
 get '/' do
-   erb :index
+  @name = %w(Idiot Fucker Cockface Twat).sample
+  erb :index
 end
 
 get '/secret' do
